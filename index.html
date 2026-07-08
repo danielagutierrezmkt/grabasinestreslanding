@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graba sin Estrés — Domina el miedo frente a la cámara</title>
+<meta name="description" content="Técnicas de psicología aplicada para entender por qué te bloqueas, gestionar el miedo al juicio y hablar frente a la cámara con autenticidad.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Graba sin Estrés — Habla frente a la cámara con autenticidad">
+<meta property="og:description" content="Técnicas de psicología aplicada para superar el miedo a la cámara en 7 días.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   GRABA SIN ESTRÉS — Landing
+   Estilo: Instrument Serif (display) + Inter (UI/cuerpo)
+   ============================================================ */
+
+:root{
+  --black:#0a0a0b;
+  --black-soft:#131316;
+  --white:#ffffff;
+  --paper:#fafafa;
+  --ink:#101012;
+  --ink-2:#3a3a40;
+  --ink-3:#6b6b73;
+  --line:rgba(10,10,12,.10);
+  --line-dark:rgba(255,255,255,.12);
+  --accent:#6d5bd0;
+  --accent-soft:#efedfb;
+  --green:#a9e700;
+  --green-2:#d5f379;
+  --green-glow:rgba(169,231,0,.22);
+  --red:#e02b20;
+  --radius:22px;
+  --radius-sm:14px;
+  --maxw:1180px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --shadow-soft:0 1px 2px rgba(10,10,12,.04),0 12px 40px rgba(10,10,12,.06);
+  --shadow-lift:0 2px 4px rgba(10,10,12,.05),0 30px 70px rgba(10,10,12,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--white);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ---------- layout helpers ---------- */
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{position:relative;padding:clamp(80px,11vw,140px) 0}
+.eyebrow{
+  font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:22px;display:inline-flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--accent);display:inline-block;opacity:.6}
+
+h1,h2,h3{font-weight:400;letter-spacing:-.01em;line-height:1.04}
+h1{font-family:"Instrument Serif",serif;font-size:clamp(2.6rem,5.8vw,4.6rem);line-height:1.02;letter-spacing:-.015em}
+h2{font-family:"Instrument Serif",serif;font-size:clamp(2rem,4.2vw,3.4rem);line-height:1.05}
+h3{font-size:1.15rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--ink-2);font-weight:400;line-height:1.65}
+p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
+.hl{background:linear-gradient(transparent 58%,var(--green-2) 58%);color:var(--ink);padding:0 .07em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dark .hl{background:none;color:var(--green);padding:0;border-radius:0}
+
+/* ---------- color themes ---------- */
+.dark{background:var(--black);color:#f4f4f6}
+.dark h1,.dark h2,.dark h3{color:#fff}
+.dark .lead,.dark p.body{color:rgba(255,255,255,.72)}
+.dark .eyebrow{color:var(--green-2)}
+.dark .eyebrow::before{background:var(--green-2)}
+.paper{background:var(--paper)}
+
+/* glow orbs */
+.glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;pointer-events:none;z-index:0}
+
+/* ---------- buttons ---------- */
+.btn-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:15px 28px;border-radius:100px;font-size:15.5px;font-weight:600;letter-spacing:-.01em;
+  cursor:pointer;border:1px solid transparent;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .25s,color .25s;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--ink);color:#fff;box-shadow:0 10px 30px rgba(10,10,12,.18)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(10,10,12,.26)}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-secondary:hover{transform:translateY(-2px);border-color:rgba(10,10,12,.35)}
+.dark .btn-primary{background:#fff;color:var(--ink);box-shadow:0 10px 34px rgba(0,0,0,.5)}
+.dark .btn-secondary{color:#fff;border-color:var(--line-dark)}
+.dark .btn-secondary:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.4)}
+.btn-accent{background:var(--green);color:#0a0a0b;box-shadow:0 10px 30px rgba(169,231,0,.34)}
+.btn-accent:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(169,231,0,.5)}
+.btn-lg{padding:18px 36px;font-size:17px}
+.btn-full{width:100%;justify-content:center}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .4s var(--ease),box-shadow .4s var(--ease),padding .4s;
+  padding:18px 0;
+}
+.nav.scrolled{
+  background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  box-shadow:0 1px 0 var(--line);
+  padding:12px 0;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.02em;font-size:17px;color:var(--ink)}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px var(--green-glow);flex-shrink:0}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a:not(.btn){font-size:14.5px;color:var(--ink-2);font-weight:500;transition:color .2s}
+.nav-links a:not(.btn):hover{color:var(--ink)}
+.nav .btn{padding:11px 20px;font-size:14px}
+@media(max-width:860px){.nav-links a:not(.btn){display:none}}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  padding-top:0;overflow:hidden;background:var(--paper);
+  display:flex;align-items:center;
+}
+.hero-inner{
+  width:100%;max-width:860px;margin:0 auto;padding:0 24px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding-top:clamp(110px,15vw,170px);padding-bottom:clamp(0px,0vw,0px);
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent-soft);border:1px solid rgba(109,91,208,.2);
+  color:var(--accent);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:7px 16px;border-radius:100px;margin-bottom:28px;
+}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.hero h1{color:var(--ink);margin-bottom:22px;max-width:820px}
+.hero .lead{margin-bottom:34px;max-width:640px;color:var(--ink-2)}
+.hero .btn-row{justify-content:center}
+.hero-badges{display:flex;gap:22px;margin-top:36px;flex-wrap:wrap;justify-content:center}
+.hero-badge{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-3);font-weight:500}
+.hero-badge .dot{width:4px;height:4px;border-radius:50%;background:var(--green);flex-shrink:0}
+.hero-visual{width:100%;max-width:680px;margin:48px auto 0}
+.hero-visual img{
+  width:100%;
+  border-radius:var(--radius) var(--radius) 0 0;
+  filter:drop-shadow(0 -8px 40px rgba(10,10,12,.10));
+}
+@media(max-width:600px){
+  .hero-inner{padding-bottom:0}
+  .hero-visual{max-width:100%;margin-top:36px}
+}
+
+/* ============================================================
+   EL PROBLEMA
+   ============================================================ */
+.problema-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.emoji-visual{
+  position:relative;display:grid;place-items:center;
+  min-height:clamp(280px,36vw,420px);font-size:clamp(120px,22vw,260px);line-height:1;
+}
+.emoji-visual::before{
+  content:"";position:absolute;width:60%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,var(--green-glow),transparent 68%);
+  filter:blur(12px);z-index:0;
+}
+.emoji-visual span{position:relative;z-index:1;filter:drop-shadow(0 24px 44px rgba(0,0,0,.28))}
+.problema-copy h2{margin-bottom:22px}
+.problema-copy p.body{margin-bottom:14px}
+@media(max-width:880px){
+  .problema-grid{grid-template-columns:1fr;gap:40px}
+  .emoji-visual{min-height:240px;order:-1}
+}
+
+/* ============================================================
+   HOY vs DESPUÉS
+   ============================================================ */
+.compare-head{text-align:center;margin-bottom:54px}
+.compare-head h2{margin-bottom:16px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:0}
+.cpanel{border-radius:var(--radius);padding:38px 34px;border:1px solid var(--line-dark)}
+.cpanel .tag{
+  font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:22px;display:inline-flex;align-items:center;gap:8px;
+  padding:6px 14px;border-radius:100px;
+}
+.cpanel.old{background:rgba(255,255,255,.04)}
+.cpanel.old .tag{color:rgba(255,255,255,.4);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+.cpanel.new{background:rgba(169,231,0,.06);border-color:rgba(169,231,0,.25)}
+.cpanel.new .tag{color:#0a0a0b;background:var(--green);border:none}
+.cpanel ul{list-style:none}
+.cpanel li{
+  display:flex;gap:13px;align-items:flex-start;padding:13px 0;
+  font-size:1rem;border-bottom:1px solid rgba(255,255,255,.07);
+  color:rgba(255,255,255,.72);
+}
+.cpanel li:last-child{border-bottom:none}
+.cpanel.old li{color:rgba(255,255,255,.38);text-decoration:none}
+.cpanel.old li .li-ic{opacity:.5}
+.cpanel.new li{color:rgba(255,255,255,.9)}
+.li-ic{font-size:18px;flex-shrink:0;line-height:1.4}
+@media(max-width:700px){.compare{grid-template-columns:1fr}}
+
+/* ============================================================
+   TRANSICIÓN
+   ============================================================ */
+.transition-section{text-align:center;padding:clamp(60px,9vw,120px) 0}
+.transition-section h2{margin:0 auto 22px;max-width:820px}
+.transition-section p.body{max-width:680px;margin:0 auto}
+
+/* ============================================================
+   CONTENIDO — acordeón
+   ============================================================ */
+.acc{margin-top:48px}
+.acc-item{border-bottom:1px solid var(--line-dark)}
+.acc-head{
+  width:100%;background:none;border:none;cursor:pointer;text-align:left;
+  display:flex;align-items:center;gap:20px;padding:22px 6px;color:inherit;font-family:inherit;
+}
+.acc-num{
+  font-family:"Instrument Serif",serif;font-size:1.4rem;color:var(--green-2);
+  min-width:50px;font-style:italic;opacity:.95;flex-shrink:0;
+}
+.acc-title{flex:1;font-size:1.12rem;font-weight:500;letter-spacing:-.01em;color:#fff}
+.acc-subtitle{font-size:.9rem;color:rgba(255,255,255,.45);font-weight:400;margin-top:3px}
+.acc-icon{
+  width:26px;height:26px;border-radius:50%;border:1px solid var(--line-dark);
+  display:grid;place-items:center;flex-shrink:0;transition:transform .4s var(--ease),background .3s;
+}
+.acc-icon svg{width:14px;height:14px;color:rgba(255,255,255,.7);transition:transform .4s var(--ease)}
+.acc-item.open .acc-icon{background:var(--green);border-color:var(--green)}
+.acc-item.open .acc-icon svg{transform:rotate(45deg);color:#0a0a0b}
+.acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.acc-item.open .acc-body{grid-template-rows:1fr}
+.acc-body-inner{overflow:hidden}
+.acc-body p{padding:0 6px 24px 70px;color:rgba(255,255,255,.6);font-size:1rem;line-height:1.7}
+@media(max-width:560px){
+  .acc-num{min-width:40px;font-size:1.2rem}
+  .acc-title{font-size:1rem}
+  .acc-body p{padding-left:6px}
+}
+
+/* ============================================================
+   BONUSES
+   ============================================================ */
+.bonuses-head{margin-bottom:54px}
+.bonuses-head h2{margin-bottom:16px}
+.bonuses-head .lead{max-width:680px}
+.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:0}
+.bonus-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow-soft);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.bonus-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
+.bonus-img{aspect-ratio:1/1;overflow:hidden;background:#f0eef9}
+.bonus-img img{width:100%;height:100%;object-fit:cover}
+.bonus-body{padding:24px 22px}
+.bonus-label{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);background:var(--accent-soft);padding:4px 12px;border-radius:100px;margin-bottom:12px;
+}
+.bonus-card h3{color:var(--ink);font-size:1.05rem;margin-bottom:10px;line-height:1.35}
+.bonus-card p{font-size:.93rem;color:var(--ink-3);line-height:1.6;margin-bottom:18px}
+.bonus-price{display:flex;align-items:center;gap:10px}
+.bonus-price .old{font-size:.9rem;color:var(--ink-3);text-decoration:line-through}
+.bonus-price .free{font-size:1rem;font-weight:700;color:var(--red)}
+@media(max-width:880px){.bonus-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.bonus-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   VALUE STACK
+   ============================================================ */
+.value-stack{text-align:center}
+.value-stack-img{max-width:840px;margin:40px auto;border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 4px rgba(0,0,0,.2),0 40px 80px rgba(0,0,0,.4)}
+.value-stack-img img{width:100%}
+.value-list{list-style:none;max-width:640px;margin:0 auto 40px;text-align:left}
+.value-list li{
+  display:flex;gap:14px;align-items:center;padding:13px 0;
+  border-bottom:1px solid var(--line-dark);font-size:1.02rem;color:rgba(255,255,255,.85);
+}
+.value-list li:last-child{border-bottom:none}
+.value-list li .ic{font-size:18px;flex-shrink:0}
+.value-list li .tag-red{color:var(--green-2);font-weight:700;margin-left:auto;white-space:nowrap;font-size:.9rem}
+.value-list li .tag-strike{color:rgba(255,255,255,.35);text-decoration:line-through;font-size:.88rem}
+.price-box{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);padding:36px 40px;max-width:480px;margin:0 auto 32px;
+}
+.price-box .price-tag{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green-2);margin-bottom:10px}
+.price-main{display:flex;align-items:baseline;gap:6px;justify-content:center;margin:8px 0 4px}
+.price-main .cur{font-size:1.2rem;color:rgba(255,255,255,.6)}
+.price-main .amt{font-family:"Instrument Serif",serif;font-size:4.2rem;line-height:1;color:#fff}
+.price-old{font-size:.95rem;color:rgba(255,255,255,.35);text-decoration:line-through;margin-bottom:4px}
+.price-note{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:28px}
+.trust-note{font-size:13px;color:rgba(255,255,255,.4);margin-top:14px;display:flex;align-items:center;gap:6px;justify-content:center}
+
+/* countdown */
+.countdown-wrap{margin:32px 0}
+.countdown-label{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:14px}
+.countdown{display:inline-flex;gap:8px;align-items:center}
+.countdown-seg{
+  background:var(--red);border-radius:12px;padding:14px 18px;min-width:72px;text-align:center;
+  box-shadow:0 8px 24px rgba(224,43,32,.35);
+}
+.countdown-seg .num{font-family:"Instrument Serif",serif;font-size:2.6rem;line-height:1;color:#fff;display:block}
+.countdown-seg .lbl{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block;margin-top:2px}
+.countdown-sep{font-family:"Instrument Serif",serif;font-size:2rem;color:rgba(255,255,255,.3)}
+
+/* ============================================================
+   TESTIMONIO GRANDE
+   ============================================================ */
+.big-quote{max-width:840px;margin:0 auto;text-align:center}
+.big-quote .quote-mark{font-family:"Instrument Serif",serif;font-size:6rem;line-height:.8;color:var(--accent);opacity:.3;margin-bottom:-20px}
+.big-quote blockquote{font-family:"Instrument Serif",serif;font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.55;color:var(--ink);font-style:italic;margin-bottom:24px}
+.big-quote cite{font-size:.95rem;color:var(--ink-3);font-style:normal;font-weight:500}
+
+/* ============================================================
+   FUTURE PACING
+   ============================================================ */
+.future-pacing{text-align:center}
+.future-pacing h2{max-width:760px;margin:0 auto 22px}
+.future-pacing .lead{max-width:620px;margin:0 auto 32px}
+.future-list{list-style:none;max-width:560px;margin:0 auto 40px;text-align:left}
+.future-list li{
+  display:flex;gap:12px;align-items:flex-start;padding:10px 0;
+  font-size:1rem;color:rgba(255,255,255,.72);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.future-list li:last-child{border-bottom:none}
+.future-list li .ic{flex-shrink:0;font-size:17px}
+.cost-note{
+  background:rgba(169,231,0,.08);border:1px solid rgba(169,231,0,.18);
+  border-radius:var(--radius-sm);padding:20px 24px;max-width:560px;margin:0 auto 32px;
+  font-size:.97rem;color:rgba(255,255,255,.72);line-height:1.6;
+}
+.cost-note strong{color:var(--green-2)}
+
+/* ============================================================
+   TESTIMONIOS
+   ============================================================ */
+.testimonials-head{text-align:center;margin-bottom:54px}
+.testimonials-head h2{margin-bottom:12px}
+.stars{color:#f5a623;font-size:1.2rem;letter-spacing:2px;margin-bottom:8px}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:0}
+.tcard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;
+  box-shadow:var(--shadow-soft);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
+.tcard .stars{font-size:1rem;margin-bottom:14px}
+.tcard blockquote{font-size:.97rem;color:var(--ink-2);line-height:1.7;margin-bottom:20px;font-style:italic}
+.tcard-author{display:flex;align-items:center;gap:14px}
+.tcard-avatar{width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--accent-soft)}
+.tcard-avatar img{width:100%;height:100%;object-fit:cover}
+.tcard-name{font-weight:600;font-size:.95rem;color:var(--ink)}
+.tcard-role{font-size:.85rem;color:var(--ink-3)}
+@media(max-width:700px){.tgrid{grid-template-columns:1fr}}
+
+/* ============================================================
+   GARANTÍA
+   ============================================================ */
+.guarantee-grid{display:grid;grid-template-columns:.9fr 1.2fr;gap:64px;align-items:center}
+.guarantee-badge-wrap{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:24px;
+}
+.guarantee-badge-visual{
+  width:200px;height:200px;border-radius:50%;
+  background:linear-gradient(145deg,#f5d76e,#d4a017);
+  display:grid;place-items:center;
+  box-shadow:0 0 0 12px rgba(212,160,23,.12),0 20px 60px rgba(212,160,23,.3);
+  text-align:center;padding:24px;
+}
+.guarantee-badge-visual .days{font-family:"Instrument Serif",serif;font-size:3.2rem;color:#0a0a0b;line-height:1}
+.guarantee-badge-visual .days-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#0a0a0b;opacity:.7}
+.guarantee-copy h2{margin-bottom:16px}
+.guarantee-copy p.body{margin-bottom:14px}
+@media(max-width:800px){
+  .guarantee-grid{grid-template-columns:1fr;gap:40px}
+  .guarantee-badge-wrap{order:-1}
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-acc{max-width:860px;margin:48px auto 0}
+.faq-acc .acc-title{font-size:1.08rem}
+
+/* ============================================================
+   CTA FINAL
+   ============================================================ */
+.cta-final{text-align:center;overflow:hidden}
+.cta-final h2{max-width:780px;margin:0 auto 22px}
+.cta-final .lead{max-width:580px;margin:0 auto 36px}
+.cta-final .btn-row{justify-content:center;flex-direction:column;align-items:center;gap:12px}
+
+/* ============================================================
+   TRUST STRIP
+   ============================================================ */
+.trust-strip{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;margin-top:28px}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:.9rem;color:rgba(255,255,255,.55);font-weight:500}
+.trust-item svg{width:22px;height:22px;color:var(--green-2);flex-shrink:0}
+.trust-item strong{color:rgba(255,255,255,.8)}
+.payment-row{
+  display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;
+  margin-top:18px;opacity:.5;filter:grayscale(1) brightness(2);
+}
+.payment-row img{height:24px;width:auto}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:#050506;color:rgba(255,255,255,.5);padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.06)}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot-brand{display:flex;align-items:center;gap:8px;font-weight:600;color:rgba(255,255,255,.8);font-size:16px}
+.foot-links{display:flex;gap:24px;font-size:13.5px}
+.foot-links a:hover{color:#fff}
+.foot-disclaimer{font-size:11.5px;color:rgba(255,255,255,.25);margin-top:28px;line-height:1.6;text-align:center}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ============================================================
+   STICKY CTA BAR (mobile)
+   ============================================================ */
+.sticky-cta{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:var(--green);padding:14px 20px;
+  box-shadow:0 -4px 24px rgba(0,0,0,.3);
+}
+.sticky-cta a{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  color:#0a0a0b;font-weight:700;font-size:15px;text-align:center;
+}
+@media(max-width:640px){.sticky-cta{display:block}}
+</style>
+</head>
+<body>
+
+<!-- ===================== STICKY CTA (mobile) ===================== -->
+<div class="sticky-cta">
+  <a href="https://pay.hotmart.com/O106254632G?off=ho4wybj9&checkoutMode=10&hideBillet=1" target="_blank" rel="noopener">
+    🎬 Quiero inscribirme ahora — $17 USD
+  </a>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><span class="dot"></span> Graba sin Estrés</a>
+    <div class="nav-links">
+      <a href="#contenido">Contenido</a>
+      <a href="#bonos">Bonuses</a>
+      <a href="#garantia">Garantía</a>
+      <a href="#faq">Preguntas</a>
+      <a href="https://pay.hotmart.com/O106254632G?off=ho4wybj9&checkoutMode=10&hideBillet=1" target="_blank" rel="noopener" class="btn btn-accent">Inscribirme ahora</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== 1 · HERO ===================== -->
+<div class="hero" id="top">
+  <div class="glow" style="width:700px;height:700px;background:rgba(109,91,208,.06);top:-300px;right:-200px;opacity:1"></div>
+  <div class="glow" style="width:500px;height:500px;background:rgba(169,231,0,.07);bottom:0;left:-150px;opacity:1"></div>
+  <div class="hero-inner reveal in">
+    <div class="hero-tag"><span class="dot"></span> ¡Curso online · Psicología aplicada!</div>
+    <h1>Domina el miedo frente a la cámara y habla con <span class="hl">autenticidad</span>, en tan solo 7 días, aunque hoy te paralices cada vez que intentas grabar.</h1>
+    <p class="lead">Técnicas de psicología aplicada para entender por qué te bloqueas, gestionar el miedo al juicio y sentirte más segura frente a la cámara — sin intentar convertirte en alguien que no eres.</p>
+    <div class="btn-row">
+      <a href="https://pay.hotmart.com/O106254632G?off=ho4wybj9&checkoutMode=10&hideBillet=1" target="_blank" rel="noopener" class="btn btn-accent btn-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Quiero inscribirme — $17 USD
+      </a>
+    </div>
+    <div class="hero-badges">
+      <span class="hero-badge"><span class="dot"></span> 10 clases de psicología</span>
+      <span class="hero-badge"><span class="dot"></span> 3 bonuses gratis</span>
+      <span class="hero-badge"><span class="dot"></span> Acceso de por vida</span>
+      <span class="hero-badge"><span class="dot"></span> Garantía 7 días</span>
+    </div>
+    <div class="hero-visual">
+      <img src="https://educalia.online/wp-content/uploads/2026/06/Graba-sin-estres.webp" alt="Curso Graba sin Estrés — Daniela Gutiérrez">
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 2 · EL PROBLEMA ===================== -->
+<section id="problema">
+  <div class="glow" style="width:440px;height:440px;background:#e7e3fa;top:-80px;right:-120px;opacity:.35"></div>
+  <div class="wrap">
+    <div class="problema-grid">
+      <div class="problema-copy reveal in">
+        <span class="eyebrow">El problema real</span>
+        <h2>No es la cámara lo que <span class="hl">te está frenando</span>.</h2>
+        <p class="body">Tienes ideas. Tienes conocimientos. Tienes algo valioso que aportar.</p>
+        <p class="body">Pero cada vez que intentas grabar, aparecen las dudas, la autocrítica y el miedo al juicio. Empiezas a pensar demasiado, repites la misma toma una y otra vez y terminas haciendo algo que ya conoces muy bien: borrar el video.</p>
+        <p class="body">Lo curioso es que nadie te rechazó. Nadie te criticó. Y aun así decidiste esconderte.</p>
+        <p class="body" style="font-weight:500;color:var(--ink)">💭 Porque el problema no suele ser la cámara. El problema es lo que ocurre en tu mente cuando intentas exponerte.</p>
+      </div>
+      <div class="emoji-visual reveal in" style="transition-delay:.12s">
+        <span>📷</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3 · HOY vs DESPUÉS ===================== -->
+<section class="dark" id="transformacion">
+  <div class="glow" style="width:500px;height:500px;background:#1a1560;bottom:-160px;left:-120px;opacity:.4"></div>
+  <div class="wrap">
+    <div class="compare-head reveal in">
+      <span class="eyebrow">La transformación</span>
+      <h2>Deja de luchar contra ti misma <span class="hl">cada vez que intentas grabar</span>.</h2>
+    </div>
+    <div class="compare">
+      <div class="cpanel old reveal in" style="transition-delay:.08s">
+        <span class="tag">Hoy</span>
+        <ul>
+          <li><span class="li-ic">🚫</span> Te quedas en blanco</li>
+          <li><span class="li-ic">🚫</span> Piensas demasiado</li>
+          <li><span class="li-ic">🚫</span> Te juzgas constantemente</li>
+          <li><span class="li-ic">🚫</span> Grabas y borras</li>
+          <li><span class="li-ic">🚫</span> Esperas sentirte lista</li>
+          <li><span class="li-ic">🚫</span> El miedo decide por ti</li>
+        </ul>
+      </div>
+      <div class="cpanel new reveal in" style="transition-delay:.16s">
+        <span class="tag">Después del curso</span>
+        <ul>
+          <li><span class="li-ic">✅</span> Sabes cómo gestionar el bloqueo</li>
+          <li><span class="li-ic">✅</span> Te comunicas con naturalidad y seguridad</li>
+          <li><span class="li-ic">✅</span> Te muestras con más libertad</li>
+          <li><span class="li-ic">✅</span> Grabas y publicas</li>
+          <li><span class="li-ic">✅</span> Empiezas aunque todavía exista miedo</li>
+          <li><span class="li-ic">✅</span> Tú decides, aunque exista miedo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4 · TRANSICIÓN ===================== -->
+<section class="transition-section" id="enfoque">
+  <div class="glow" style="width:480px;height:480px;background:#efedfb;top:-100px;left:50%;transform:translateX(-50%);opacity:.6"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="reveal in">
+      <span class="eyebrow" style="justify-content:center">El enfoque del curso</span>
+      <h2>De sentirte pequeña frente a una cámara a <span class="hl">comprender qué ocurre realmente dentro de ti</span> cuando intentas exponerte.</h2>
+      <p class="body" style="margin-top:20px">La mayoría intenta vencer el miedo grabando más videos. Este entrenamiento te muestra algo diferente: comprender qué ocurre dentro de ti cuando te expones, para que grabar deje de ser una lucha constante contra ti misma.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5 · CONTENIDO ===================== -->
+<section class="dark" id="contenido">
+  <div class="glow" style="width:460px;height:460px;background:#1a1560;top:80px;right:-160px;opacity:.4"></div>
+  <div class="wrap">
+    <div class="reveal in" style="max-width:680px">
+      <span class="eyebrow">Lo que vas a descubrir</span>
+      <h2>Diez clases para mirar tu miedo <span class="hl">de otra forma</span>.</h2>
+    </div>
+    <div class="acc reveal in" id="acc-contenido" style="transition-delay:.1s">
+
+      <div class="acc-item open">
+        <button class="acc-head">
+          <span class="acc-num">01</span>
+          <div style="flex:1">
+            <div class="acc-title">Identifica el verdadero origen de tu bloqueo</div>
+            <div class="acc-subtitle">¿Por qué nos da miedo la cámara?</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Descubre por qué tu cuerpo reacciona como si estuviera en peligro cada vez que intentas exponerte. Dejas de decirte «algo está mal conmigo» y empiezas a entender qué está ocurriendo realmente.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">02</span>
+          <div style="flex:1">
+            <div class="acc-title">Comprende las fuerzas invisibles que influyen en tus decisiones</div>
+            <div class="acc-subtitle">Estructura Psíquica</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Entiende por qué una parte de ti quiere crecer, mostrarse y avanzar… mientras otra parte encuentra excusas para seguir escondida.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">03</span>
+          <div style="flex:1">
+            <div class="acc-title">Descubre quién está hablando dentro de tu cabeza</div>
+            <div class="acc-subtitle">El Ello, el Yo y el Superyó</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Reconoce las voces internas que te impulsan, te frenan y te juzgan. Empiezas a diferenciar tus deseos reales de las exigencias imposibles que te impones.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">04</span>
+          <div style="flex:1">
+            <div class="acc-title">Rompe la sensación de que "deberías saber hacerlo mejor"</div>
+            <div class="acc-subtitle">La Maldición del Conocimiento</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Aprende por qué saber mucho sobre tu tema puede convertirse en uno de los mayores obstáculos para comunicarlo de forma simple. Menos presión. Más naturalidad.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">05</span>
+          <div style="flex:1">
+            <div class="acc-title">Deja de sentir que algún día descubrirán que no eres suficiente</div>
+            <div class="acc-subtitle">El Síndrome del Impostor</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Identifica los patrones mentales que te hacen dudar de tus capacidades incluso cuando tienes experiencia y conocimientos valiosos. El problema no es que no sepas. Es que no te crees capaz de mostrarlo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">06</span>
+          <div style="flex:1">
+            <div class="acc-title">Reconoce cómo te proteges… y cómo eso te limita</div>
+            <div class="acc-subtitle">Mecanismos de Defensa</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Descubre las formas en que tu mente intenta protegerte del rechazo, la crítica o la vergüenza. Y cómo esas mismas defensas terminan alejándote de las oportunidades que deseas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">07</span>
+          <div style="flex:1">
+            <div class="acc-title">Entiende por qué te comparas constantemente</div>
+            <div class="acc-subtitle">Efecto Dunning-Kruger</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Aprende cómo funciona la percepción de nuestras capacidades y por qué tantas personas menos preparadas parecen sentirse más seguras que tú.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">08</span>
+          <div style="flex:1">
+            <div class="acc-title">Descubre cómo tu personalidad influye en tu manera de comunicar</div>
+            <div class="acc-subtitle">Introducción a los Temperamentos</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Identifica tus tendencias naturales y deja de intentar comunicar como alguien que no eres.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">09</span>
+          <div style="flex:1">
+            <div class="acc-title">Construye una forma de comunicar alineada contigo</div>
+            <div class="acc-subtitle">Teoría de los Temperamentos + Quién Soy vs Quién Quiero Ser</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Comprende tus fortalezas, tus bloqueos y la identidad que deseas construir frente a la cámara. Porque la confianza no aparece cuando actúas. Aparece cuando dejas de actuar como otra persona.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-num">10</span>
+          <div style="flex:1">
+            <div class="acc-title">Convierte el conocimiento en acción</div>
+            <div class="acc-subtitle">Tips para Grabar y Cierre</div>
+          </div>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Aplica recomendaciones prácticas para empezar a grabar con menos tensión, menos sobreanálisis y más claridad. No para convertirte en influencer. Sino para que tu mensaje deje de quedarse atrapado dentro de ti.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 6 · BONOS ===================== -->
+<section id="bonos" style="background:var(--paper);border-top:1px solid var(--line)">
+  <div class="glow" style="width:500px;height:500px;background:#ece9fb;top:-80px;right:-160px;opacity:.5"></div>
+  <div class="wrap">
+    <div class="bonuses-head reveal in">
+      <span class="eyebrow">Y si pensabas que eso era todo…</span>
+      <h2>Solo por hoy también te llevas <span class="hl">3 regalos especiales</span>.</h2>
+      <p class="lead">Porque entender por qué te bloqueas es el primer paso. Pero también necesitas herramientas para actuar cuando aparezcan las dudas, el miedo o esa voz interna que intenta convencerte de volver a esconderte.</p>
+    </div>
+    <div class="bonus-grid">
+
+      <div class="bonus-card reveal in" style="transition-delay:.08s">
+        <div class="bonus-img">
+          <img src="https://educalia.online/wp-content/uploads/2026/06/Graba-sin-estres-1.webp" alt="Bonus 1: Creencias y Reencuadres Frente a la Cámara">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-label">🎁 Bono #1</span>
+          <h3>Creencias y Reencuadres Frente a la Cámara</h3>
+          <p>Identifica las creencias que alimentan tu miedo al grabar y aprende a reemplazarlas por pensamientos más útiles y realistas.</p>
+          <div class="bonus-price">
+            <span class="old">27 USD</span>
+            <span class="free">HOY GRATIS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bonus-card reveal in" style="transition-delay:.16s">
+        <div class="bonus-img">
+          <img src="https://educalia.online/wp-content/uploads/2026/06/Graba-sin-estres-2.webp" alt="Bonus 2: Cómo Hablarte Cuando Algo Sale Mal">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-label">🎁 Bono #2</span>
+          <h3>Cómo Hablarte Cuando Algo Sale Mal al Grabar</h3>
+          <p>Aprende a gestionar la frustración, la autocrítica y los errores sin castigarte cada vez que algo no sale perfecto.</p>
+          <div class="bonus-price">
+            <span class="old">17 USD</span>
+            <span class="free">HOY GRATIS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bonus-card reveal in" style="transition-delay:.24s">
+        <div class="bonus-img">
+          <img src="https://educalia.online/wp-content/uploads/2026/06/Graba-sin-estres-3-1.webp" alt="Bonus 3: 30 Formas de Empezar un Video">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-label">🎁 Bono #3</span>
+          <h3>30 Formas de Empezar un Video Sin Quedarte en Blanco</h3>
+          <p>30 aperturas listas para adaptar a tu estilo y dejar de perder tiempo pensando cómo comenzar.</p>
+          <div class="bonus-price">
+            <span class="old">27 USD</span>
+            <span class="free">HOY GRATIS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7 · VALUE STACK + PRECIO ===================== -->
+<section class="dark" id="oferta">
+  <div class="glow" style="width:560px;height:560px;background:#1a3d00;top:-80px;right:-200px;opacity:.35"></div>
+  <div class="wrap">
+    <div class="value-stack reveal in">
+      <span class="eyebrow" style="justify-content:center">Un resumen de todo lo que te llevarás</span>
+      <h2>Todo incluido, en un solo pago.</h2>
+
+      <div class="value-stack-img reveal in" style="transition-delay:.1s">
+        <img src="https://educalia.online/wp-content/uploads/2026/06/Graba-sin-estres-BIENVENIDA-14.webp" alt="Resumen completo del curso Graba sin Estrés">
+      </div>
+
+      <ul class="value-list reveal in" style="transition-delay:.16s">
+        <li>
+          <span class="ic">✅</span>
+          <span>Acceso completo al curso online <strong>Graba sin Estrés</strong> (valor 69 USD)</span>
+          <span class="tag-red">80% OFF</span>
+        </li>
+        <li>
+          <span class="ic">✅</span>
+          <span><strong>Bono #1</strong> — Creencias y Reencuadres Frente a la Cámara</span>
+          <span class="tag-red">GRATIS</span>
+        </li>
+        <li>
+          <span class="ic">✅</span>
+          <span><strong>Bono #2</strong> — Cómo Hablarte Cuando Algo Sale Mal</span>
+          <span class="tag-red">GRATIS</span>
+        </li>
+        <li>
+          <span class="ic">✅</span>
+          <span><strong>Bono #3</strong> — 30 Formas de Empezar un Video</span>
+          <span class="tag-red">GRATIS</span>
+        </li>
+        <li><span class="ic">✅</span> <span>Acceso inmediato y de por vida</span></li>
+        <li><span class="ic">✅</span> <span>Actualizaciones futuras gratuitas</span></li>
+        <li><span class="ic">✅</span> <span>3 regalos valorizados en 71 USD</span></li>
+      </ul>
+
+      <div class="price-box reveal in" style="transition-delay:.2s">
+        <div class="price-tag">Tu inversión hoy</div>
+        <div class="price-old"><s>69 USD</s></div>
+        <div class="price-main">
+          <span class="cur">$</span>
+          <span class="amt">17</span>
+          <span class="cur">USD</span>
+        </div>
+        <p class="price-note">Pago único · sin mensualidades · acceso de por vida</p>
+
+        <a href="https://pay.hotmart.com/O106254632G?off=ho4wybj9&checkoutMode=10&hideBillet=1" target="_blank" rel="noopener" class="btn btn-accent btn-full btn-lg" style="margin-bottom:14px">
+          🎬 Quiero inscribirme ahora
+        </a>
+
+        <p class="trust-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;color:var(--green-2)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Tu acceso llega al correo inmediatamente después del pago
+        </p>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="trust-strip reveal in" style="transition-delay:.24s">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Compra segura</strong><br>Entorno protegido</div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Privacidad</strong><br>Información 100% segura</div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Entrega por e-mail</strong><br>Acceso inmediato</div>
+        </div>
+      </div>
+
+      <!-- Payment methods -->
+      <div style="margin-top:20px;text-align:center;opacity:.4;font-size:13px;color:rgba(255,255,255,.6)">
+        Aceptamos: PayPal · Tarjeta de crédito · Débito · Transferencia y más métodos según tu país
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown-wrap reveal in" style="transition-delay:.28s">
+        <p class="countdown-label">⏰ Esta oferta finaliza en</p>
+        <div class="countdown">
+          <div class="countdown-seg">
+            <span class="num" id="cd-min">29</span>
+            <span class="lbl">Min</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-seg">
+            <span class="num" id="cd-sec">59</span>
+            <span class="lbl">Seg</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:1rem;color:rgba(255,255,255,.55);margin-top:16px;text-align:center">
+        Si contrataras una sesión individual para trabajar estos bloqueos, probablemente invertirías varias veces más que el valor de este entrenamiento.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8 · TESTIMONIO GRANDE ===================== -->
+<section id="testimonio-andrea" style="background:var(--paper);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="big-quote reveal in">
+      <div class="quote-mark">"</div>
+      <blockquote>
+        Tenía más de 80 videos guardados en mi celular que nadie había visto. Cada uno era una idea que nunca publiqué porque siempre encontraba algo que corregir. Cuando escuché que el problema no era la cámara sino lo que ocurría dentro de mí cuando me exponía, sentí que me estaban describiendo. No fue un cambio de un día para otro. Pero sí fue la primera vez que dejé de sentir que estaba luchando contra mí misma.
+      </blockquote>
+      <cite>— Andrea · Ciudad de México · 34 años</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 9 · FUTURE PACING ===================== -->
+<section class="dark future-pacing" id="futuro">
+  <div class="glow" style="width:500px;height:500px;background:#1a1560;top:-100px;right:-100px;opacity:.35"></div>
+  <div class="wrap">
+    <div class="reveal in">
+      <span class="eyebrow" style="justify-content:center">Dos posibilidades</span>
+      <h2>Si no haces nada…</h2>
+      <p class="lead" style="max-width:620px;margin:0 auto 32px">Dentro de tres meses probablemente seguirás teniendo las mismas ideas. Los mismos conocimientos. Las mismas ganas de mostrarte. Y el mismo miedo frenándote.</p>
+
+      <ul class="future-list reveal in" style="transition-delay:.1s">
+        <li><span class="ic">💭</span> Seguirás grabando y borrando</li>
+        <li><span class="ic">💭</span> Esperarás el momento perfecto que nunca llega</li>
+        <li><span class="ic">💭</span> Seguirás escondiendo lo que sabes y lo que eres</li>
+      </ul>
+
+      <p class="lead" style="max-width:620px;margin:0 auto 32px;color:rgba(255,255,255,.85)">Pero también existe <strong style="color:var(--green-2)">otra posibilidad</strong>. Que dentro de tres meses mires atrás y recuerdes este momento como el día en que finalmente entendiste que nunca necesitaste ser perfecta para empezar. Solo necesitabas dejar de pelear contigo misma.</p>
+
+      <div class="cost-note reveal in" style="transition-delay:.16s">
+        <strong>Tu inversión es mínima: menos de $0,56 centavos al día.</strong><br>
+        Menos de lo que cuesta seguir posponiendo durante meses algo que sabes que necesitas hacer.<br><br>
+        El costo más alto no es el entrenamiento. El costo más alto es seguir escondiéndote.
+      </div>
+
+      <div class="btn-row" style="justify-content:center" class="reveal in">
+        <a href="https://pay.hotmart.com/O106254632G?off=ho4wybj9&checkoutMode=10&hideBillet=1" target="_blank" rel="noopener" class="btn btn-accent btn-lg">
+          Clic aquí para acceder ahora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10 · TESTIMONIOS ===================== -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="testimonials-head reveal in">
+      <span class="eyebrow">Lo que dicen ellas</span>
+      <h2>Mujeres cansadas de <span class="hl">esconderse detrás del miedo</span>.</h2>
+      <div class="stars">★★★★★</div>
+      <p class="lead">Valorado por emprendedoras, coaches y creadoras de contenido de distintos países.</p>
+    </div>
+    <div class="tgrid">
+
+      <div class="tcard reveal in" style="transition-delay:.08s">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          Siempre grababa videos y los dejaba guardados en borradores. Me pasaba horas cambiando palabras, repitiendo tomas y buscando errores que probablemente nadie veía. Pensaba que mi problema era la falta de confianza, pero entendí que llevaba años juzgándome antes de que alguien más pudiera hacerlo. La primera vez que publiqué un video sin grabarlo veinte veces sentí una mezcla rara de miedo y alivio. Fue como sacarme un peso que llevaba encima desde hace mucho tiempo.
+        </blockquote>
+        <div class="tcard-author">
+          <div class="tcard-avatar">
+            <img src="https://educalia.online/wp-content/uploads/2026/06/Graba-sin-estres-5.webp" alt="Camila" loading="lazy">
+          </div>
+          <div>
+            <div class="tcard-name">Camila</div>
+            <div class="tcard-role">Emprendedora · Bogotá, Colombia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard reveal in" style="transition-delay:.16s">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          Me daba muchísima vergüenza pensar que conocidos, familiares o ex compañeros de trabajo podían ver mis videos. Por eso siempre encontraba una excusa para no publicar. A la segunda semana ya me di cuenta de algo que nunca había visto: no estaba esperando el momento perfecto, estaba escondiéndome. Y cuando entendí eso, empecé a actuar diferente. No perfecta. Pero sí mucho más libre.
+        </blockquote>
+        <div class="tcard-author">
+          <div class="tcard-avatar">
+            <img src="https://educalia.online/wp-content/uploads/2026/06/Graba-sin-estres-4.webp" alt="Valentina" loading="lazy">
+          </div>
+          <div>
+            <div class="tcard-name">Valentina</div>
+            <div class="tcard-role">Psicóloga · Buenos Aires, Argentina</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 11 · GARANTÍA ===================== -->
+<section id="garantia" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="guarantee-grid">
+      <div class="guarantee-badge-wrap reveal in">
+        <div class="guarantee-badge-visual">
+          <div>
+            <div class="days">7</div>
+            <div class="days-label">Días de<br>Garantía</div>
+          </div>
+        </div>
+        <p style="font-size:.88rem;color:var(--ink-3);text-align:center;max-width:200px">Satisfacción 100% garantizada o te devolvemos tu dinero</p>
+      </div>
+      <div class="guarantee-copy reveal in" style="transition-delay:.1s">
+        <span class="eyebrow">Sin riesgo para ti</span>
+        <h2>Garantía de 7 días · Satisfacción 100%</h2>
+        <p class="body" style="margin-top:18px">Si después de comprender lo que te está frenando sigues exactamente igual, no tiene sentido que lo pagues.</p>
+        <p class="body">Tienes <strong>7 días completos</strong> para entrar al entrenamiento, ver las clases, hacer los ejercicios y descubrir si esta forma de entender tus bloqueos realmente te aporta claridad.</p>
+        <p class="body">Si después de recorrer el material sientes que no te ayudó a comprenderte mejor, escríbeme y te devolveré tu dinero.</p>
+        <p class="body" style="font-weight:600;color:var(--ink)">Sin explicaciones incómodas. Sin discusiones. Sin vueltas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 12 · FAQ ===================== -->
+<section class="dark faq" id="faq">
+  <div class="wrap">
+    <div class="reveal in" style="max-width:660px">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Resolvamos tus <span class="hl">dudas</span>.</h2>
+    </div>
+    <div class="faq-acc acc reveal in" id="acc-faq" style="transition-delay:.1s">
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Este entrenamiento es para mí si me da muchísima vergüenza aparecer en cámara?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">Sí. De hecho, probablemente fue creado pensando en personas como tú. Está pensado para quienes se quedan en blanco, borran tomas una y otra vez o sienten que el miedo termina tomando decisiones por ellas. Si alguna vez pensaste «sé lo que quiero decir, pero no logro mostrarme», estás en el lugar correcto.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Y si soy muy tímida?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">No pasa nada. La idea no es convertirte en una persona extrovertida ni obligarte a actuar como alguien que no eres. Muchas veces no necesitas cambiar tu personalidad. Necesitas dejar de pelear con ella.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Voy a aprender a grabar Reels o editar videos?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">No. Y eso es justamente lo que hace diferente este entrenamiento. Aquí trabajamos algo que suele aparecer antes de todo eso: el bloqueo mental y emocional que surge cuando intentas mostrarte frente a una cámara. Porque de poco sirve saber cómo grabar si nunca te animas a hacerlo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Cuánto tiempo tengo acceso al curso online?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">El acceso es de por vida. Puedes avanzar a tu ritmo, volver a las clases cuando quieras y revisar los ejercicios todas las veces que necesites. No hay presión para terminarlo en una semana.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Qué pasa después de comprar?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">Una vez completes tu compra recibirás un correo con las instrucciones de acceso. Desde allí podrás ingresar al entrenamiento y empezar inmediatamente. No hay esperas ni fechas de inicio. Puedes comenzar el mismo día.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Qué diferencia a este entrenamiento de otros cursos de creación de contenido?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">La mayoría se enfoca en qué decir frente a una cámara. Este entrenamiento se enfoca en entender por qué, aun sabiendo qué decir, muchas veces no lo haces. Trabajamos el síndrome del impostor, los mecanismos de defensa, el perfeccionismo y la autocrítica. Porque el verdadero obstáculo rara vez es la cámara.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Y si sigo sintiendo miedo después?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">Es posible que todavía aparezca miedo algunas veces. Y eso es completamente normal. El objetivo no es eliminar cualquier sensación incómoda. El objetivo es que el miedo deje de decidir por ti. Porque la confianza suele aparecer después de la acción, no antes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Es un pago único o una suscripción?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">Es un único pago de 17 USD. No hay mensualidades, renovaciones automáticas ni cobros sorpresa. Accedes una vez y el entrenamiento queda disponible para ti de por vida.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Cuál es el precio en mi moneda local?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">Al dar clic en el botón de inscripción serás redirigida a la página de pago donde el valor aparecerá automáticamente en tu moneda local.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title" style="margin-left:0">¿Qué formas de pago aceptan?</span>
+          <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p style="padding-left:6px">Aceptamos todos los medios de pago disponibles según tu país: tarjeta de crédito y débito, PayPal, transferencia bancaria y otros métodos locales. La plataforma Hotmart garantiza una experiencia de compra 100% segura.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 13 · CTA FINAL ===================== -->
+<section id="cta-final" style="background:var(--paper);border-top:1px solid var(--line)">
+  <div class="glow" style="width:600px;height:600px;background:#ece9fb;top:-200px;left:50%;transform:translateX(-50%);opacity:.5"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="cta-final reveal in">
+      <span class="eyebrow" style="justify-content:center">Da el primer paso</span>
+      <h2>Tus ideas <span class="hl">merecen ser compartidas</span>.</h2>
+      <p class="lead">La confianza frente a la cámara no aparece de un día para otro. Muchas veces comienza entendiendo mejor lo que ocurre dentro de nosotros cuando decidimos exponernos.</p>
+      <div class="btn-row">
+        <a href="https://pay.hotmart.com/O106254632G?off=ho4wybj9&checkoutMode=10&hideBillet=1" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          🎬 Quiero inscribirme ahora — $17 USD
+        </a>
+      </div>
+      <p style="font-size:13px;color:var(--ink-3);margin-top:18px;display:flex;align-items:center;justify-content:center;gap:6px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;color:var(--accent)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Garantía de 7 días · Pago único · Acceso inmediato
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand"><span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block"></span> Graba sin Estrés</div>
+      <div class="foot-links">
+        <a href="#contenido">Contenido</a>
+        <a href="#bonos">Bonuses</a>
+        <a href="#garantia">Garantía</a>
+        <a href="#faq">Preguntas</a>
+        <a href="https://pay.hotmart.com/O106254632G?off=ho4wybj9&checkoutMode=10&hideBillet=1" target="_blank" rel="noopener">Comprar</a>
+      </div>
+    </div>
+    <p class="foot-disclaimer">
+      Este sitio no es parte del sitio web de Facebook o Facebook Inc. Además, este sitio no está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de FACEBOOK, Inc.<br>
+      © <span id="year">2026</span> Graba sin Estrés · Daniela Gutiérrez. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<script>
+// ---- Nav scroll ----
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+// ---- Accordions ----
+function initAccordion(id) {
+  const group = document.getElementById(id);
+  if (!group) return;
+  group.querySelectorAll('.acc-head').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      group.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+}
+initAccordion('acc-contenido');
+initAccordion('acc-faq');
+
+// ---- Reveal on scroll ----
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ---- Countdown (30 min session timer) ----
+(function() {
+  const KEY = 'gse_cd_end';
+  let end = localStorage.getItem(KEY);
+  const now = Date.now();
+  if (!end || parseInt(end) < now) {
+    end = now + 30 * 60 * 1000;
+    localStorage.setItem(KEY, end);
+  }
+  const minEl = document.getElementById('cd-min');
+  const secEl = document.getElementById('cd-sec');
+  function tick() {
+    const rem = Math.max(0, parseInt(localStorage.getItem(KEY)) - Date.now());
+    const m = Math.floor(rem / 60000);
+    const s = Math.floor((rem % 60000) / 1000);
+    if (minEl) minEl.textContent = String(m).padStart(2,'0');
+    if (secEl) secEl.textContent = String(s).padStart(2,'0');
+    if (rem > 0) setTimeout(tick, 1000);
+  }
+  tick();
+})();
+
+// ---- Year ----
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
