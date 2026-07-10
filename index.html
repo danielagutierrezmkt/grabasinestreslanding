@@ -173,23 +173,9 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 /* ============================================================
    EL PROBLEMA
    ============================================================ */
-.problema-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
-.emoji-visual{
-  position:relative;display:grid;place-items:center;
-  min-height:clamp(280px,36vw,420px);font-size:clamp(120px,22vw,260px);line-height:1;
-}
-.emoji-visual::before{
-  content:"";position:absolute;width:60%;aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle,var(--green-glow),transparent 68%);
-  filter:blur(12px);z-index:0;
-}
-.emoji-visual span{position:relative;z-index:1;filter:drop-shadow(0 24px 44px rgba(0,0,0,.28))}
+.problema-grid{display:grid;grid-template-columns:1fr;gap:0;align-items:center;max-width:720px}
 .problema-copy h2{margin-bottom:22px}
 .problema-copy p.body{margin-bottom:14px}
-@media(max-width:880px){
-  .problema-grid{grid-template-columns:1fr;gap:40px}
-  .emoji-visual{min-height:240px;order:-1}
-}
 
 /* ============================================================
    HOY vs DESPUÉS
@@ -514,9 +500,6 @@ footer{background:#050506;color:rgba(255,255,255,.5);padding:48px 0 32px;border-
         <p class="body">Pero cada vez que intentas grabar, aparecen las dudas, la autocrítica y el miedo al juicio. Empiezas a pensar demasiado, repites la misma toma una y otra vez y terminas haciendo algo que ya conoces muy bien: borrar el video.</p>
         <p class="body">Lo curioso es que nadie te rechazó. Nadie te criticó. Y aun así decidiste esconderte.</p>
         <p class="body" style="font-weight:500;color:var(--ink)">💭 Porque el problema no suele ser la cámara. El problema es lo que ocurre en tu mente cuando intentas exponerte.</p>
-      </div>
-      <div class="emoji-visual reveal in" style="transition-delay:.12s">
-        <span>📷</span>
       </div>
     </div>
   </div>
