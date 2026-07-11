@@ -233,18 +233,18 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 .acc-item{border-bottom:1px solid var(--line-dark)}
 .acc-head{
   width:100%;background:none;border:none;cursor:pointer;text-align:left;
-  display:flex;align-items:center;gap:20px;padding:22px 6px;color:inherit;font-family:inherit;
+  display:grid;grid-template-columns:50px 1fr auto;align-items:center;column-gap:20px;
+  padding:22px 6px;color:inherit;font-family:inherit;
 }
 .acc-num{
   font-family:"Instrument Serif",serif;font-size:1.4rem;color:var(--green-2);
-  min-width:50px;font-style:italic;opacity:.95;flex-shrink:0;
+  font-style:italic;opacity:.95;
 }
-.acc-head > div{min-width:0}
-.acc-title{flex:1;font-size:1.12rem;font-weight:500;letter-spacing:-.01em;color:#fff;min-width:0;overflow-wrap:break-word}
+.acc-title{font-size:1.12rem;font-weight:500;letter-spacing:-.01em;color:#fff;display:block;overflow-wrap:break-word;word-break:break-word}
 .acc-subtitle{font-size:.9rem;color:rgba(255,255,255,.45);font-weight:400;margin-top:3px}
 .acc-icon{
   width:26px;height:26px;border-radius:50%;border:1px solid var(--line-dark);
-  display:grid;place-items:center;flex-shrink:0;transition:transform .4s var(--ease),background .3s;
+  display:grid;place-items:center;transition:transform .4s var(--ease),background .3s;
 }
 .acc-icon svg{width:14px;height:14px;color:rgba(255,255,255,.7);transition:transform .4s var(--ease)}
 .acc-item.open .acc-icon{background:var(--green);border-color:var(--green)}
@@ -254,7 +254,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 .acc-body-inner{overflow:hidden}
 .acc-body p{padding:0 6px 24px 70px;color:rgba(255,255,255,.6);font-size:1rem;line-height:1.7}
 @media(max-width:560px){
-  .acc-num{min-width:40px;font-size:1.2rem}
+  .acc-head{grid-template-columns:40px 1fr auto;column-gap:12px}
   .acc-title{font-size:1rem}
   .acc-body p{padding-left:6px}
 }
@@ -406,6 +406,8 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
    ============================================================ */
 .faq-acc{max-width:860px;margin:48px auto 0}
 .faq-acc .acc-title{font-size:1.08rem}
+.faq-acc .acc-head{grid-template-columns:1fr auto}
+@media(max-width:560px){.faq-acc .acc-head{grid-template-columns:1fr auto}}
 
 /* ============================================================
    CTA FINAL
