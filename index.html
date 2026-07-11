@@ -139,7 +139,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
    ============================================================ */
 .hero{
   padding-top:0;overflow:hidden;background:var(--paper);
-  display:flex;align-items:center;
+  display:flex;align-items:center;position:relative;
 }
 .hero-inner{
   width:100%;max-width:860px;margin:0 auto;padding:0 24px;
@@ -173,7 +173,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 /* ============================================================
    EL PROBLEMA
    ============================================================ */
-.problema-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.problema-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;max-width:720px}
 .emoji-visual{
   position:relative;display:grid;place-items:center;
   min-height:clamp(280px,36vw,420px);font-size:clamp(120px,22vw,260px);line-height:1;
@@ -187,8 +187,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 .problema-copy h2{margin-bottom:22px}
 .problema-copy p.body{margin-bottom:14px}
 @media(max-width:880px){
-  .problema-grid{grid-template-columns:1fr;gap:40px}
-  .emoji-visual{min-height:240px;order:-1}
+  .problema-grid{gap:24px}
 }
 
 /* ============================================================
@@ -240,6 +239,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
   font-family:"Instrument Serif",serif;font-size:1.4rem;color:var(--green-2);
   min-width:50px;font-style:italic;opacity:.95;flex-shrink:0;
 }
+.acc-head > div{min-width:0}
 .acc-title{flex:1;font-size:1.12rem;font-weight:500;letter-spacing:-.01em;color:#fff;min-width:0;overflow-wrap:break-word}
 .acc-subtitle{font-size:.9rem;color:rgba(255,255,255,.45);font-weight:400;margin-top:3px}
 .acc-icon{
@@ -525,9 +525,6 @@ footer{background:#050506;color:rgba(255,255,255,.5);padding:48px 0 32px;border-
         <p class="body">Pero cada vez que intentas grabar, aparecen las dudas, la autocrítica y el miedo al juicio. Empiezas a pensar demasiado, repites la misma toma una y otra vez y terminas haciendo algo que ya conoces muy bien: borrar el video.</p>
         <p class="body">Lo curioso es que nadie te rechazó. Nadie te criticó. Y aun así decidiste esconderte.</p>
         <p class="body" style="font-weight:500;color:var(--ink)">💭 Porque el problema no suele ser la cámara. El problema es lo que ocurre en tu mente cuando intentas exponerte.</p>
-      </div>
-      <div class="emoji-visual reveal in" style="transition-delay:.12s">
-        <span>📷</span>
       </div>
     </div>
   </div>
