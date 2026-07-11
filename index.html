@@ -46,7 +46,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
 body{
   font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:var(--white);
@@ -62,7 +62,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- layout helpers ---------- */
 .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
-section{position:relative;padding:clamp(80px,11vw,140px) 0}
+section{position:relative;padding:clamp(80px,11vw,140px) 0;overflow:hidden}
 .eyebrow{
   font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
   color:var(--accent);margin-bottom:22px;display:inline-flex;align-items:center;gap:10px;
@@ -139,7 +139,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
    ============================================================ */
 .hero{
   padding-top:0;overflow:hidden;background:var(--paper);
-  display:flex;align-items:center;
+  display:flex;align-items:center;position:relative;
 }
 .hero-inner{
   width:100%;max-width:860px;margin:0 auto;padding:0 24px;
@@ -173,7 +173,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 /* ============================================================
    EL PROBLEMA
    ============================================================ */
-.problema-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.problema-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;max-width:720px}
 .emoji-visual{
   position:relative;display:grid;place-items:center;
   min-height:clamp(280px,36vw,420px);font-size:clamp(120px,22vw,260px);line-height:1;
@@ -187,8 +187,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 .problema-copy h2{margin-bottom:22px}
 .problema-copy p.body{margin-bottom:14px}
 @media(max-width:880px){
-  .problema-grid{grid-template-columns:1fr;gap:40px}
-  .emoji-visual{min-height:240px;order:-1}
+  .problema-grid{gap:24px}
 }
 
 /* ============================================================
@@ -234,17 +233,18 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 .acc-item{border-bottom:1px solid var(--line-dark)}
 .acc-head{
   width:100%;background:none;border:none;cursor:pointer;text-align:left;
-  display:flex;align-items:center;gap:20px;padding:22px 6px;color:inherit;font-family:inherit;
+  display:grid;grid-template-columns:50px 1fr auto;align-items:center;column-gap:20px;
+  padding:22px 6px;color:inherit;font-family:inherit;
 }
 .acc-num{
   font-family:"Instrument Serif",serif;font-size:1.4rem;color:var(--green-2);
-  min-width:50px;font-style:italic;opacity:.95;flex-shrink:0;
+  font-style:italic;opacity:.95;
 }
-.acc-title{flex:1;font-size:1.12rem;font-weight:500;letter-spacing:-.01em;color:#fff}
+.acc-title{font-size:1.12rem;font-weight:500;letter-spacing:-.01em;color:#fff;display:block;overflow-wrap:break-word;word-break:break-word}
 .acc-subtitle{font-size:.9rem;color:rgba(255,255,255,.45);font-weight:400;margin-top:3px}
 .acc-icon{
   width:26px;height:26px;border-radius:50%;border:1px solid var(--line-dark);
-  display:grid;place-items:center;flex-shrink:0;transition:transform .4s var(--ease),background .3s;
+  display:grid;place-items:center;transition:transform .4s var(--ease),background .3s;
 }
 .acc-icon svg{width:14px;height:14px;color:rgba(255,255,255,.7);transition:transform .4s var(--ease)}
 .acc-item.open .acc-icon{background:var(--green);border-color:var(--green)}
@@ -254,7 +254,7 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
 .acc-body-inner{overflow:hidden}
 .acc-body p{padding:0 6px 24px 70px;color:rgba(255,255,255,.6);font-size:1rem;line-height:1.7}
 @media(max-width:560px){
-  .acc-num{min-width:40px;font-size:1.2rem}
+  .acc-head{grid-template-columns:40px 1fr auto;column-gap:12px}
   .acc-title{font-size:1rem}
   .acc-body p{padding-left:6px}
 }
@@ -406,6 +406,8 @@ p.body{color:var(--ink-2);font-size:1.05rem;line-height:1.75}
    ============================================================ */
 .faq-acc{max-width:860px;margin:48px auto 0}
 .faq-acc .acc-title{font-size:1.08rem}
+.faq-acc .acc-head{grid-template-columns:1fr auto}
+@media(max-width:560px){.faq-acc .acc-head{grid-template-columns:1fr auto}}
 
 /* ============================================================
    CTA FINAL
@@ -457,7 +459,11 @@ footer{background:#050506;color:rgba(255,255,255,.5);padding:48px 0 32px;border-
   display:flex;align-items:center;justify-content:center;gap:8px;
   color:#0a0a0b;font-weight:700;font-size:15px;text-align:center;
 }
-@media(max-width:640px){.sticky-cta{display:block}}
+@media(max-width:640px){
+  .sticky-cta{display:block}
+  .btn-lg{white-space:normal;text-align:center}
+  .cta-final .btn{width:100%}
+}
 </style>
 </head>
 <body>
@@ -521,9 +527,6 @@ footer{background:#050506;color:rgba(255,255,255,.5);padding:48px 0 32px;border-
         <p class="body">Pero cada vez que intentas grabar, aparecen las dudas, la autocrítica y el miedo al juicio. Empiezas a pensar demasiado, repites la misma toma una y otra vez y terminas haciendo algo que ya conoces muy bien: borrar el video.</p>
         <p class="body">Lo curioso es que nadie te rechazó. Nadie te criticó. Y aun así decidiste esconderte.</p>
         <p class="body" style="font-weight:500;color:var(--ink)">💭 Porque el problema no suele ser la cámara. El problema es lo que ocurre en tu mente cuando intentas exponerte.</p>
-      </div>
-      <div class="emoji-visual reveal in" style="transition-delay:.12s">
-        <span>📷</span>
       </div>
     </div>
   </div>
